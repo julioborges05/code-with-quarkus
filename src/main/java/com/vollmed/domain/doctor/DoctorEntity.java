@@ -15,11 +15,24 @@ public class DoctorEntity {
 
     private String email;
 
-    private String crm;
+    private Long crm;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "speciality")
     private SpecialityEnum specialityEnum;
 
     @Embedded
     private AddressEntity addressEntity;
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Long getCrm() {
+        return this.crm;
+    }
+
+    public SpecialityEnum getSpeciality() {
+        return this.specialityEnum;
+    }
 }

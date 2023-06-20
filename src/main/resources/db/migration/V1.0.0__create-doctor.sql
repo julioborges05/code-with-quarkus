@@ -1,9 +1,9 @@
 create table doctor(
 
-    id bigint primary key not null,
+    id serial primary key,
     name varchar(100) not null,
     email varchar(100) not null unique,
-    crm varchar(6) not null unique,
+    crm bigint not null unique,
     speciality varchar(100) not null,
     address varchar(100) not null,
     zip_code varchar(9) not null,
